@@ -10,6 +10,9 @@ app.use(
     extended: true,
   })
 )
+// app.use(
+//     express.json()
+// )
 
 app.get('/', (request, response) => {
     response.json({ info: 'Node.js, Express, and Postgres API' })
@@ -19,6 +22,7 @@ app.get('/users', db.getUsers)
 
 // Set the HTTP request method, endpoint URL and the relevant function.
 app.get('/users/:bfid', db.getUserInfo)
+app.post('/users', db.registerUser)
 
 app.listen(port, () => {
 console.log(`App running on port ${port}.`)
