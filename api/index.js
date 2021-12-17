@@ -15,8 +15,6 @@ app.get('/', (request, response) => {
     response.json({ info: 'Node.js, Express, and Postgres API' })
   })
 
-app.get('/users', db.getUsers)
-
 // Set the HTTP request method, endpoint URL and the relevant function.
 app.get('/users/:bfid', db.getUserInfo)
 
