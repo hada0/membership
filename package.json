@@ -3,11 +3,18 @@
   "version": "1.0.0",
   "description": "Membership API with Node.js, Express and PostgreSQL",
   "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
     "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3"
   }
 }
